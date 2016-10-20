@@ -1,0 +1,17 @@
+li{
+  list-style:none;
+}
+h1{
+	text-align: center;
+	padding: 40px 0;
+	background: black;
+	color: white;
+	text-shadow: 0 0 11px white;	
+	margin:0;
+}
+#movieItem{
+	width:23%;
+	display:inline-block;
+	margin:1%;
+	text-align: center;
+}
