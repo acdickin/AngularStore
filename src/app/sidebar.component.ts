@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 				<li><div class="sidebar-arrow2"></div></li>
 				<li><h4>Menu</h4></li>
 				<li  *ngFor="let icon of icons">
-					<div class={{icon.type}}></div>
+					<img class="icons" src={{icon.type}} alt={{icon.name}}/>
 				</li>
 			</ul>
 		</div>
@@ -21,10 +21,10 @@ import { Component } from '@angular/core';
 export class SidebarComponent{
 	show=false;
 	public icons = [
-	{ type:"hats"},
-	{ type:"shirts"},
-	{ type:"pants"},
-	{ type:"shoes"},
-	{ type:"bag"}
+	{ type:"/images/hats.png", name:"hats"},
+	{ type:"/images/shirts.png", name:"shirts"},
+	{ type:"/images/pants.png", name:"pants"},
+	{ type:"/images/shoes.png", name:"shoes"},
+	{ type:"/images/bag.png", name:"bag"}
 	];
 }
