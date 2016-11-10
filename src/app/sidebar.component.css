@@ -16,7 +16,7 @@ li img{
 	position: fixed;
 	height:50px;
 	width:50px;
-	top:250px;
+	top:45%;
 	right:0px;
 	background-color: grey;
 }
@@ -24,14 +24,14 @@ li img{
 	position: absolute;
 	height:50px;
 	width:50px;
-	top:250px;
+    top:45%;
 	right:85px;
-	-moz-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-	filter: FlipH;
-	-ms-filter: "FlipH";
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 	/*display:hidden;*/
 }
 .sidebar ul{
@@ -57,10 +57,10 @@ li img{
 }
 .icons{
 	margin: 5px auto auto;
-	padding: 0;
-	display: inline-block;
-	background-repeat: no-repeat no-repeat;
-	pointer-events: none;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat no-repeat;
+    pointer-events: none;
 	height: 50px;
 	width: 50px;
 }
@@ -68,8 +68,10 @@ button:hover{
 	border:black bold 3px;
 	background-color:darkgrey;
 }
+
 button:active{
-	border:black bold 1px;
+border:black bold 1px;
+
 }
 button{
 	background-color: transparent;	

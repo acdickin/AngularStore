@@ -9,7 +9,7 @@ import { Component, EventEmitter } from '@angular/core';
 			<ul class="sidebar-menu" >
 				<li><h4>Menu</h4></li>
 				<li  *ngFor="let icon of icons">
-					<button (click)="onClick(icon.name)"><img class="icons" src="{{icon.src}}"  alt={{icon.name}} /></button>
+					<button (click)="onClick(icon.name)" ><img id="{{icon.name}}" src="{{icon.src}}"  alt={{icon.name}} /></button>
 				</li>
 				<div><img src ="./assets/img/arrow1-icon.png" class="sidebar-arrow2" (click)="show=!show"/></div>
 			</ul>
@@ -20,7 +20,8 @@ import { Component, EventEmitter } from '@angular/core';
 		outputs:['sidebarChanged']
 })
 export class SidebarComponent{
-	show=false;
+	private show=false;
+	private currentValue="";
 	public icons = [
 		{ src: "./assets/img/hat-icon.png", name:"hats"},
 		{ src: "./assets/img/shirt-icon.png", name:"shirts"},
@@ -31,8 +32,13 @@ export class SidebarComponent{
 
 	sidebarChanged = new EventEmitter<string>();
 	onClick(value:string){
-		
-		console.log(value);
-		this.sidebarChanged.emit(value);
+		if(this.currentValue!=value){	
+			this.currentValue=value;
+			this.sidebarChanged.emit(value);
+		}
+		else{
+			this.currentValue="";
+			this.sidebarChanged.emit("");
+		}
 	}
 }
