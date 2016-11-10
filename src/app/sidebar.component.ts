@@ -1,30 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ad-sidebar',
   template: `
-  		<img src ="img/arrow1-icon.png" class="sidebar-arrow"/>
+  		<img src ="./assets/img/arrow1-icon.png" class="sidebar-arrow" *ngIf="!show" (click)="show=!show"/>
 		
-		<div class="sidebar">
+		<div class="sidebar" *ngIf="show">
 			<ul class="sidebar-menu" >
-		
-				<li><div class="sidebar-arrow2"></div></li>
 				<li><h4>Menu</h4></li>
 				<li  *ngFor="let icon of icons">
-					<img class="icons" src={{icon.type}} alt={{icon.name}}/>
+					<button (click)="onClick(icon.name)"><img class="icons" src="{{icon.src}}"  alt={{icon.name}} /></button>
 				</li>
+				<div><img src ="./assets/img/arrow1-icon.png" class="sidebar-arrow2" (click)="show=!show"/></div>
 			</ul>
+
 		</div>
 		`,
-		styleUrls: ['./sidebar.component.css'] 
+		styleUrls: ['./sidebar.component.css'],
+		outputs:['sidebarChanged']
 })
 export class SidebarComponent{
 	show=false;
 	public icons = [
-	{ type:"/images/hats.png", name:"hats"},
-	{ type:"/images/shirts.png", name:"shirts"},
-	{ type:"/images/pants.png", name:"pants"},
-	{ type:"/images/shoes.png", name:"shoes"},
-	{ type:"/images/bag.png", name:"bag"}
+	{ src: "./assets/img/hat-icon.png", name:"hats"},
+	{ src: "./assets/img/shirt-icon.png", name:"shirts"},
+	{ src: "./assets/img/pants-icon.png", name:"pants"},
+	{ src: "./assets/img/shoes-icon.png", name:"shoes"},
+	{ src: "./assets/img/bag-icon.png", name:"bag"}
 	];
+
+	
+
+	sidebarChanged = new EventEmitter<string>();
+	
+	onClick(value:string){
+		console.log(value);
+		this.sidebarChanged.emit(value);
+
+	}
 }

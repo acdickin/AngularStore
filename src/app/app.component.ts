@@ -13,8 +13,9 @@ import { Component } from '@angular/core';
         
       </div>
     </div>
-    <ad-sidebar></ad-sidebar>   
-    
+   
+    <ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>   
+    <h2>{{sidebarValue}}</h2>
     <h1>Cart:</h1>
       <div *ngFor="let item of cart">{{item}}</div>
   `,
@@ -24,6 +25,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Shopping Cart';
   recentItem="None";
+  sidebarValue:string;
   cart =[];
   public clothingList = [
     {
@@ -60,4 +62,5 @@ export class AppComponent {
     this.cart.push(item.name);
     alert(item.name +' was added to cart');
   }
+
 }

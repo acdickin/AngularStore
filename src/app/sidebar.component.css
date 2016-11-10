@@ -16,28 +16,35 @@ li img{
 	position: fixed;
 	height:50px;
 	width:50px;
-	top:300px;
+	top:250px;
 	right:0px;
+	background-color: grey;
 }
 .sidebar-arrow2{
 	position: absolute;
 	height:50px;
 	width:50px;
 	top:250px;
-	right:80px;
-	display:hidden;
+	right:85px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+	/*display:hidden;*/
 }
 .sidebar ul{
 	position: fixed;
 	height:100%;
-	width:150px;
-	top:10px;
+	width:100px;
+	top:-18px;
 	right:0px;
 	display:hidden;
 }
 .sidebar-menu li{
 	text-align:center;
-	height:12%;
+	height:14%;
 	width:inherit;
 	list-style:none;	
 	display: inline-block;
@@ -56,4 +63,21 @@ li img{
     pointer-events: none;
 	height: 50px;
 	width: 50px;
+}
+button:hover{
+	border:black bold 3px;
+	background-color:darkgrey;
+}
+
+button:active{
+border:black bold 1px;
+
+}
+
+button{
+	background-color: transparent;	
+	border: transparent;	
+}
+.sidebar-menu{
+	background-color: grey;
 }
