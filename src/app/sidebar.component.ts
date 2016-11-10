@@ -22,20 +22,17 @@ import { Component, EventEmitter } from '@angular/core';
 export class SidebarComponent{
 	show=false;
 	public icons = [
-	{ src: "./assets/img/hat-icon.png", name:"hats"},
-	{ src: "./assets/img/shirt-icon.png", name:"shirts"},
-	{ src: "./assets/img/pants-icon.png", name:"pants"},
-	{ src: "./assets/img/shoes-icon.png", name:"shoes"},
-	{ src: "./assets/img/bag-icon.png", name:"bag"}
+		{ src: "./assets/img/hat-icon.png", name:"hats"},
+		{ src: "./assets/img/shirt-icon.png", name:"shirts"},
+		{ src: "./assets/img/pants-icon.png", name:"pants"},
+		{ src: "./assets/img/shoes-icon.png", name:"shoes"},
+		{ src: "./assets/img/bag-icon.png", name:"bag"}
 	];
 
-	
-
 	sidebarChanged = new EventEmitter<string>();
-	
 	onClick(value:string){
+		
 		console.log(value);
 		this.sidebarChanged.emit(value);
-
 	}
 }
