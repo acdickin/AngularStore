@@ -6,7 +6,7 @@ import { Pipe } from '@angular/core';
 
 export class TypePipe{
   transform(items:any[], args:string):any[] {
-    if(args===undefined|| args==""){
+    if(args===undefined || args==""){
       return items;
     }
     return items.filter(function(item){
