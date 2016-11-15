@@ -23,10 +23,10 @@ export class SidebarComponent{
 	private show=false;
 	private currentValue="";
 	public icons = [
-		{ src: "./assets/img/hat-icon.png", name:"hats"},
-		{ src: "./assets/img/shirt-icon.png", name:"shirts"},
+		{ src: "./assets/img/hat-icon.png", name:"hat"},
+		{ src: "./assets/img/shirt-icon.png", name:"shirt"},
 		{ src: "./assets/img/pants-icon.png", name:"pants"},
-		{ src: "./assets/img/shoes-icon.png", name:"shoes"},
+		{ src: "./assets/img/shoes-icon.png", name:"shoe"},
 		{ src: "./assets/img/bag-icon.png", name:"bag"}
 	];
 

@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { SidebarComponent } from './sidebar.component';
 import { AppComponent } from './app.component';
-
+import { TypePipe } from './pipes/type.pipe';
 @NgModule({
   declarations: [
   SidebarComponent,
-  AppComponent
+  AppComponent,
+  TypePipe
+
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-root',
   template: `
     <h1>{{title}}</h1>
     <div id="myMovieList">
-      <div id="movieItem" *ngFor="let clothes of clothingList" >
+      <div id="movieItem" *ngFor="let clothes of clothingList| TypePipe:sidebarValue ">
         <h2>{{clothes.name}}</h2><span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>
         <p>{{clothes.description}}</p>
         <button (click)="selectedItem(clothes)">Add Item to Cart</button>
@@ -19,13 +18,14 @@ import { Component } from '@angular/core';
     <h1>Cart:</h1>
       <div *ngFor="let item of cart">{{item}}</div>
   `,
-  styleUrls: ['./app.component.css'] 
+  styleUrls: ['./app.component.css']
+ 
 })
 
 export class AppComponent {
   title = 'Shopping Cart';
   recentItem="None";
-  sidebarValue:string;
+  sidebarValue:"";
   cart =[];
   public clothingList = [
     {
