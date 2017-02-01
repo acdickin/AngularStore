@@ -1,7 +1,12 @@
- <h1>{{title}}</h1>
+<header>
+  <img id ="icon" src="./assets/img/catIcon.png" />
+ </header>
     <div id="page">
-    <h3 id="filter" *ngIf="sidebarValue !=''" >Filter: {{sidebarValue}}</h3>
-      <div class="saleCarousel"></div>
+      <slide-show></slide-show>
+
+      <div id="filterArea">
+        <h3 id="filter" *ngIf="sidebarValue !=''" >Filter: {{sidebarValue}}</h3>
+      </div>  
       <div id="movieList">
         <div id="movieItem" *ngFor="let clothes of clothingList| TypePipe:sidebarValue ">
           <img id="img" src="./assets/img/catstruction.jpg" alt="Under Constuction"/>
@@ -15,12 +20,9 @@
         </div>
       </div>
     </div>
-   
     <ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>   
-    
-    <h1>Cart:</h1>
-      <div *ngFor="let item of cart">{{item}}</div>
-
+   
+   
       <div class="container">
         <router-outlet></router-outlet>
       </div>

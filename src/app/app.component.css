@@ -5,18 +5,25 @@
 li{
   list-style:none;
 }
-h1{
+header{
+  background-color:#445562;
+	text-shadow: 0 0 5px white;	
 	text-align: center;
-	padding: 40px 0;
-	background:#15828e;
 	color: white;
-	text-shadow: 0 0 2px white;	
 	margin:0;
+
+}
+#icon{
+  background-size:contain;
+  height:200px;
+}
+h1{
+	margin:0;
+	font-family: "Fira Mono",monospace;
 }
 h3{
 	margin:0;
-	padding-left: 12%;
-	padding-top: 2%;
+	padding-left: 150px;
 }
 #movieItem{
 	width:20%;
@@ -34,12 +41,17 @@ body{
 	height:auto;
 }
 #movieList{
-	background-color:darkgrey;
+	background-color:#445562;
 	padding-left: 300px;
 }
 #filter{
-	padding-right:100px;
+	margin-right:160px;
 }
+#filter
 #filter.active{
 	animation-timing-function: ease-in;
+}
+#filterArea{
+	min-height: 60px;
+	background-color:#556674;
 }

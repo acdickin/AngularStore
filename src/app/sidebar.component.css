@@ -14,25 +14,28 @@ li img{
 }
 .sidebar-icon{
 	position: fixed;
-	height:60px;
-	width:60px;
+	height:100px;
+	width:100px;
 	top:40px;
 	left:40px;
 	opacity:0.50;
-	background:white;
 	border-radius: 5px;	
+	-webkit-transition: all .2s ease-in-out;
 }
 
 .sidebar-icon:hover{
 	opacity:1;
+	 -webkit-transition: all .2s ease-in-out;
+	 -webkit-transform: scale(1.4);
+
 }
 
 .sidebar ul{
 	position: fixed;
 	height:100%;
 	width:150px;
-	top:-20px;
-	left:0px;
+	top:0px;
+/*	left:-150px;*/
 	display:hidden;
 	padding-top: 180px;
 }
@@ -54,13 +57,17 @@ li img{
 	display: inline-block;
 	background-repeat: no-repeat no-repeat;
 	pointer-events: none;
-	height:80px;
+	height:60px;
 	width:80px;
+	-webkit-transition: all .5s ease-in;
+}
+.icons:hover{
 	
 }
 button:hover{
 	border:black bold 3px;
-	background-color:darkgrey;
+	-webkit-transition: all .5s ease-in;
+	 -webkit-transform: scale(1.4);
 }
 
 button:active{
@@ -71,10 +78,11 @@ button{
 	background-color: transparent;	
 	border: transparent;	
 }
-.sidebar-menu{
+.sidebar{
 	background-color: grey;
+	-webkit-transition: all 2s ease-in-out;
 }
-.sidebar-menu.active{
-	animation-timing-function: ease-in;
+.sidebar:active{
+	animation:translateX(150px);
+	-webkit-transition: all 2s ease-in-out;
 }
-
