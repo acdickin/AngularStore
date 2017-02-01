@@ -3,15 +3,14 @@ import { Component, EventEmitter } from '@angular/core';
 @Component({
   selector: 'ad-sidebar',
   template: `
-  		<img src ="./assets/img/arrow1-icon.png" class="sidebar-arrow" *ngIf="!show" (click)="show=!show"/>
+  		<img src ="./assets/img/menu.png" class="sidebar-icon" *ngIf="!show" (click)="show=!show"/>
 		
 		<div class="sidebar" *ngIf="show">
 			<ul class="sidebar-menu" >
-				<li><h4>Menu</h4></li>
 				<li  *ngFor="let icon of icons">
 					<button (click)="onClick(icon.name)" ><img id="{{icon.name}}" src="{{icon.src}}"  alt={{icon.name}} /></button>
 				</li>
-				<div><img src ="./assets/img/arrow1-icon.png" class="sidebar-arrow2" (click)="show=!show"/></div>
+				<div><img src ="./assets/img/menu.png" class="sidebar-icon" (click)="show=!show"/></div>
 			</ul>
 
 		</div>

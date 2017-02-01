@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+ <h1>{{title}}</h1>
+    <div id="page">
+    <h3 id="filter" *ngIf="sidebarValue !=''" >Filter: {{sidebarValue}}</h3>
+      <div class="saleCarousel"></div>
+      <div id="movieList">
+        <div id="movieItem" *ngFor="let clothes of clothingList| TypePipe:sidebarValue ">
+          <img id="img" src="./assets/img/catstruction.jpg" alt="Under Constuction"/>
+          <h2>{{clothes.name}}</h2> 
+          <!--<span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>-->
+          <p>{{clothes.description}}</p>
+         <select >
+           <option *ngFor="let number of numbers" value="number" >{{number}}</option>
+         </select> 
+          <button (click)="selectedItem(clothes, amount)">Add Item to Cart</button>
+        </div>
+      </div>
+    </div>
+   
+    <ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>   
+    
+    <h1>Cart:</h1>
+      <div *ngFor="let item of cart">{{item}}</div>
+
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
