@@ -17,9 +17,15 @@
 			<td>{{item.inCart}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.img}}</td>
-			<td>{{item.cost}}</td>
-
-
+			<td>{{item.cost | currency:'USD':true}}</td>
+		</tr>
+		<tr>
+		<td></td>
+		<td></td>
+		<td>Total:</td>
+		<td></td>
 		</tr>
   </table>
+  
+  
 </div>

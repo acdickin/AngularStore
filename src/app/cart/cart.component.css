@@ -1,5 +1,25 @@
 #cart{
 	background-color:#445562;	
 	min-height: 700px;
-	color:white;
+	padding-left:10%;
+  padding-top:2%;
+}
+h1{
+	margin:0;
+}
+table{
+	width:90%;
+	padding-bottom:100px;
+}
+th{
+	padding:15px;
+	height:50px;
+	font-size: 1.5rem;
+}
+td{
+	padding:15px;
+	font-size:1.2rem;
+}
+table{
+	border-spacing:40px;
 }

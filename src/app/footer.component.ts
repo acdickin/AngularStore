@@ -10,8 +10,9 @@ import { Component, OnInit } from '@angular/core';
 			left:0;
 			width:100%;
 		  background-color:#2C3A45;
-			text-shadow: 0 0 5px white;	
-			text-align: center;
+			padding-top:20px;	
+			padding-left:40px;
+			text-align: left;
 			color: white;
 			height:50px;
 		}

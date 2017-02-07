@@ -1,0 +1,28 @@
+.wrapper{
+	width:60%;
+	margin:0 auto;
+	background-color:#556674;
+}
+.splash{
+	background-color:#556674;
+}
+#col3{
+	position:relative;
+	float:left;
+	width:25%;
+	height:200px;
+	background-color:#57796C;
+}
+#col9{
+  position:relative;
+	float: left;
+	width:75%;
+	height:200px;
+	background-color:#3E6455;
+}
+.extra{
+  padding-bottom:100px;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color:#3e505f;
+}
