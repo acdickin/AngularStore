@@ -1,41 +1,23 @@
-ul{
-	width:1000px;
-}
-li{
-	text-align:center;
-	height:300px;
-	width:200px;
-	list-style:none;	
-	display: inline-block;
-}
-li img{
-	height:175px;
-	width:175px;
-}
 .sidebar-icon{
 	position: fixed;
 	height:100px;
 	width:100px;
-	top:40px;
-	left:40px;
+	top:20px;
+	left:20px;
 	opacity:0.50;
-	border-radius: 5px;	
+	border-radius: 10px;	
+	background-color:#445562;
 	-webkit-transition: all .2s ease-in-out;
 }
-
 .sidebar-icon:hover{
 	opacity:1;
-	 -webkit-transition: all .2s ease-in-out;
-	 -webkit-transform: scale(1.4);
-
+	-webkit-transition: all .2s ease-in-out;
 }
-
 .sidebar ul{
 	position: fixed;
 	height:100%;
-	width:150px;
-	top:0px;
-/*	left:-150px;*/
+	top:-150px;
+	left:80px;
 	display:hidden;
 	padding-top: 180px;
 }
@@ -48,8 +30,8 @@ li img{
 	
 }
 .sidebar-menu li img{
-	height:80px;
-	width:80px;
+	height:40px;
+	width:40px;
 	
 }
 .icons{
@@ -57,8 +39,8 @@ li img{
 	display: inline-block;
 	background-repeat: no-repeat no-repeat;
 	pointer-events: none;
-	height:60px;
-	width:80px;
+	height:40px;
+	width:40px;
 	-webkit-transition: all .5s ease-in;
 }
 .icons:hover{
@@ -67,7 +49,7 @@ li img{
 button:hover{
 	border:black bold 3px;
 	-webkit-transition: all .5s ease-in;
-	 -webkit-transform: scale(1.4);
+	-webkit-transform:scale(1.5);
 }
 
 button:active{

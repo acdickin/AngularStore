@@ -1,0 +1,24 @@
+.adShop{
+  padding-left:10%;
+  padding-top:2%;
+	min-height:700px;
+	background-color:#445562;
+}
+#filterArea{
+	
+}
+
+h3{
+	margin:0;
+	font-size:2rem;
+}
+
+#movieList{
+
+}
+#movieItem{
+	padding:0;
+	width:23%;
+	margin:0;
+	display:inline-block;
+}

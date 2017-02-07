@@ -3,19 +3,31 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routes } from './app.router';
+
 import { SidebarComponent } from './sidebar.component';
 import { AppComponent } from './app.component';
-import { TypePipe } from './pipes/type.pipe';
 import { CartComponent } from './cart/cart.component';
+import { ShopComponent } from './shop/shop.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { HeaderComponent } from './header.component';
+
+import { CollectableService } from './shared/collectable.service';
+
+import { TypePipe } from './pipes/type.pipe';
+import { SplashComponent } from './splash/splash.component';
+import { FooterComponent } from './footer.component';
+
 @NgModule({
   declarations: [
   SidebarComponent,
   AppComponent,
-  TypePipe,
   CartComponent,
-  SlideshowComponent
-
+  SlideshowComponent,
+  ShopComponent,
+  HeaderComponent,
+  TypePipe,
+  SplashComponent,
+  FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +35,7 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
     HttpModule,
     routes
   ],
-  providers: [],
+  providers: [CollectableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

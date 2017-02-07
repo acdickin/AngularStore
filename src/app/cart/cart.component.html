@@ -1,2 +1,25 @@
- <h1>Cart:</h1>
- <div *ngFor="let item of cart">{{item}}</div>
+<div id="cart">  
+  <h1>Cart:</h1>
+  <div *ngIf="collectedItems.length==0">
+  	<h2> No items added to the Cart</h2>
+  </div>
+
+  <table class="list-group" *ngIf="collectedItems.length> 0" >
+		<tr>
+			<th></th>
+			<th>Quantity</th>
+			<th>Name</th>
+			<th>Image</th>
+			<th>Cost</th>
+		</tr>
+		<tr class="list-group-item" *ngFor="let item of collectedItems">
+			<td><button id="remove" (click)="onRemoveFromCollection(item)" >Remove</button></td>
+			<td>{{item.inCart}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.img}}</td>
+			<td>{{item.cost}}</td>
+
+
+		</tr>
+  </table>
+</div>

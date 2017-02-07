@@ -1,28 +1,11 @@
-<header>
-  <img id ="icon" src="./assets/img/catIcon.png" />
- </header>
-    <div id="page">
-      <slide-show></slide-show>
 
-      <div id="filterArea">
-        <h3 id="filter" *ngIf="sidebarValue !=''" >Filter: {{sidebarValue}}</h3>
-      </div>  
-      <div id="movieList">
-        <div id="movieItem" *ngFor="let clothes of clothingList| TypePipe:sidebarValue ">
-          <img id="img" src="./assets/img/catstruction.jpg" alt="Under Constuction"/>
-          <h2>{{clothes.name}}</h2> 
-          <!--<span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>-->
-          <p>{{clothes.description}}</p>
-         <select >
-           <option *ngFor="let number of numbers" value="number" >{{number}}</option>
-         </select> 
-          <button (click)="selectedItem(clothes, amount)">Add Item to Cart</button>
-        </div>
-      </div>
-    </div>
-    <ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>   
-   
-   
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
+  <ad-header></ad-header>
+<div id="page">
+
+  
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+ <ad-footer></ad-footer>  
