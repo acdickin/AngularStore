@@ -16,7 +16,7 @@
 			<td><button id="remove" (click)="onRemoveFromCollection(item)">Remove</button></td>
 			<td>{{item.inCart}}</td>
 			<td>{{item.name}}</td>
-			<td>{{item.img}}</td>
+			<td><img id="img" src="../assets/img/clothes/{{item.img}}" alt="{{item.name}}"/></td>
 			<td>{{item.cost | currency:'USD':true}}</td>
 		</tr>
 		<tr>
@@ -24,7 +24,7 @@
 			<td></td>
 			<td>Total:</td>
 			<td>{{getTotal() | currency:'USD':true}}</td>
-			<td> <button [routerLink]="['/checkout']" id="Checkout" >CHECKOUT</button></td>
+			<td> <button [routerLink]="['/login']" id="Checkout" >CHECKOUT</button></td>
 		</tr>
 
   </table>

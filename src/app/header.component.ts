@@ -20,17 +20,24 @@ import { Component, OnInit } from '@angular/core';
     }
     #header{
 		  background-color:#2C3A45;
-			text-shadow: 0 0 5px white;	
-			text-align: center;
-			color: white;
-			margin:0;
-			height:150px;
+      text-align:center;
 		}
 		#shop{
 		  height: 150px;
       left:48%;
-      fixed:
+
     }
+    #login{
+      position:fixed;
+      color:black;
+      top: 40px;
+      right: 200px;
+      align: left;
+    }
+    #login:hover{
+      color: white;
+    }
+
   `
   ]
 })

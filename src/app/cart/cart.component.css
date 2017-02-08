@@ -4,6 +4,9 @@
 	padding-left:10%;
   padding-top:2%;
 }
+#img{
+	width:200px;
+}
 h1{
 	margin:0;
 }
@@ -23,5 +26,5 @@ td{
 	text-align: center;
 }
 table{
-	border-spacing:40px;
+	border-spacing:10px;
 }

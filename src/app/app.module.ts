@@ -17,6 +17,9 @@ import { TypePipe } from './pipes/type.pipe';
 import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './checkout/login.component';
+import { AlertComponent } from './alert/alert.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
   TypePipe,
   SplashComponent,
   FooterComponent,
-  CheckoutComponent
+  CheckoutComponent,
+  LoginComponent,
+  AlertComponent
   ],
   imports: [
     BrowserModule,
