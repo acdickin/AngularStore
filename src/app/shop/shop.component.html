@@ -4,7 +4,7 @@
   </div>  
 <div id="movieList">
   <div id="movieItem" *ngFor="let clothes of collectables| TypePipe:sidebarValue ">
-    <img id="img" src="../assets/img/catstruction.jpg" alt="{{clothes.name}}"/>
+    <img id="img" src="../assets/img/clothes/{{clothes.img}}" alt="{{clothes.name}}"/>
     <h2>{{clothes.name}}</h2> 
     <button (click)="onAddToCollection(clothes)">Add Item to Cart</button>
     <!--<span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>-->

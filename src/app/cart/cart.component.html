@@ -12,20 +12,22 @@
 			<th>Image</th>
 			<th>Cost</th>
 		</tr>
-		<tr class="list-group-item" *ngFor="let item of collectedItems">
-			<td><button id="remove" (click)="onRemoveFromCollection(item)" >Remove</button></td>
+		<tr class="list-group-item" *ngFor="let item of collectedItems;  ">
+			<td><button id="remove" (click)="onRemoveFromCollection(item)">Remove</button></td>
 			<td>{{item.inCart}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.img}}</td>
 			<td>{{item.cost | currency:'USD':true}}</td>
 		</tr>
 		<tr>
-		<td></td>
-		<td></td>
-		<td>Total:</td>
-		<td></td>
+			<td></td>
+			<td></td>
+			<td>Total:</td>
+			<td>{{getTotal() | currency:'USD':true}}</td>
+			<td> <button [routerLink]="['/checkout']" id="Checkout" >CHECKOUT</button></td>
 		</tr>
+
   </table>
-  
+ 
   
 </div>

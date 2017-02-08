@@ -15,10 +15,12 @@ th{
 	padding:15px;
 	height:50px;
 	font-size: 1.5rem;
+	text-align: center;
 }
 td{
 	padding:15px;
 	font-size:1.2rem;
+	text-align: center;
 }
 table{
 	border-spacing:40px;

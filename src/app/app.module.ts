@@ -16,6 +16,7 @@ import { CollectableService } from './shared/collectable.service';
 import { TypePipe } from './pipes/type.pipe';
 import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer.component';
   HeaderComponent,
   TypePipe,
   SplashComponent,
-  FooterComponent
+  FooterComponent,
+  CheckoutComponent
   ],
   imports: [
     BrowserModule,
