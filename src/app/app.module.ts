@@ -18,7 +18,7 @@ import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './checkout/login.component';
-import { AlertComponent } from './alert/alert.component';
+
 
 
 @NgModule({
@@ -33,8 +33,7 @@ import { AlertComponent } from './alert/alert.component';
   SplashComponent,
   FooterComponent,
   CheckoutComponent,
-  LoginComponent,
-  AlertComponent
+  LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -30,8 +30,8 @@ import { Component, OnInit } from '@angular/core';
     #login{
       position:fixed;
       color:black;
-      top: 40px;
-      right: 200px;
+      top: 10px;
+      right: 160px;
       align: left;
     }
     #login:hover{
