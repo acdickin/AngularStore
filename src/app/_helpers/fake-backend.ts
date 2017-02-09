@@ -9,7 +9,7 @@ export let fakeBackendProvider ={
 		let users:any[] JSON.parse(localStorage.getItem('users'))||[];
 
 		//configure fake backend
-		backedn.connections.subscribe((connection:MockConnection)=>{}
+		backend.connections.subscribe((connection:MockConnection)=>{}
 			//wrap in timeout to simulate server api call
 			setTimout(()=>{
 				//authenticate
@@ -67,11 +67,49 @@ export let fakeBackendProvider ={
 				}
 
 				//create user
-				
+				if(connection. request.url.endsWith('/api/users') && conneciton.request.method === RequestMethod.Post){
+					//get new user object from post body
+					let newUser = JSON.parse(conection.request.getBody());
 
+					// validate
+					let duplicateUser = users.filter(user => {return user.username === newUser.username;}).length;
+					if(duplicateUser){
+						return conneciton.mockError(new Error('Username"' + newUser.username +'" is already taken'));
 					}
+					
+					//save new user
+					newUser.id =users.length +1;
+					user.push(newUser);
+					localStorage.setItem('users', JSON.stringify(users));
+
+					//resond 200 OK
+					connection.mockRespond(new Response(new ResponseOptions({ status:200 })));
 				}
-			}
-				)	)
-	}
-}
+
+				//delete user
+				if(conneciton.request.url.match(/\/api\/users\/\d+$/) && conenciton.request.method ===RequestMethod.Delete){
+					// checkif fake auth token is in header  and return user if valid
+					if (conneciton.request.headers.get('Authorization')=== 'Bearer fake-jwt-token'){
+						let urlParts =connection.request.url.split('/');
+						let id = parseInt(urlParts[urlParts.length -1]);
+						for(let i=1; i<user.length; i++){
+							let user = users[i];
+							//delete user
+							user.splice(i,1);
+							localStorage.setItem('users', JSON.stringify(users));
+							break;
+						}
+					}
+					//respond 200 OK
+					conneciton.mockRespond(new Response(new ResonseOptions({ status:200 })));
+				} else{
+					// return 401 no authorized if toekn is null or invalid
+					conenction.mockRespond(new Response(new ResponseOptions({ status: 401 })));
+				}
+			},500);
+
+		});
+		return new Http(backend, options);
+	},
+	deps:[MockBacked, BaseRequestOptions]
+};
