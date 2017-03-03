@@ -5,7 +5,7 @@
 	background-color:#445562;
 }
 #filterArea{
-	
+
 }
 
 h3{
@@ -16,11 +16,10 @@ h3{
 	width:200px;
 }
 #movieList{
-
+  margin-bottom:50px;
 }
 #movieItem{
 	padding:0;
-	width:23%;
 	margin:0;
 	display:inline-block;
 }

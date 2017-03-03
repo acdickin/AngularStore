@@ -1,20 +1,23 @@
-<div class="adShop"> 	
+<div class="adShop">
 	<div id="filterArea">
     <h3 id="filter" *ngIf="sidebarValue !=''" >Filter: {{sidebarValue}}</h3>
-  </div>  
-<div id="movieList">
-  <div id="movieItem" *ngFor="let clothes of collectables| TypePipe:sidebarValue ">
-    <img id="img" src="../assets/img/clothes/{{clothes.img}}" alt="{{clothes.name}}"/>
-    <h2>{{clothes.name}}</h2> 
-    <button (click)="onAddToCollection(clothes)">Add Item to Cart</button>
-    <!--<span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>-->
-    <p>{{clothes.description}}</p>
-    <p> {{clothes.cost}}</p>
-   <!-- <select >
-     <option *ngFor="let number of numbers" value="number" >{{number}}</option>
-   </select>  -->
-    
   </div>
+<div id="movieList">
+	<div class="container-fluid">
+		<div class="row">
+		  <div id="movieItem" *ngFor="let clothes of collectables| TypePipe:sidebarValue ">
+		    <img id="img" src="../assets/img/clothes/{{clothes.img}}" alt="{{clothes.name}}"/>
+		    <h2>{{clothes.name}}</h2>
+		    <button (click)="onAddToCollection(clothes)">Add Item to Cart</button>
+		    <!--<span *ngIf="clothes.inStock < 4"> Only {{clothes.inStock}} left in Stock</span>-->
+		    <p>{{clothes.description}}</p>
+		    <p> {{clothes.cost}}</p>
+		   <!-- <select >
+		     <option *ngFor="let number of numbers" value="number" >{{number}}</option>
+		   </select>  -->
+		  </div>
+		</div>
+	</div>
 </div>
 
-<ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>   
+<ad-sidebar (sidebarChanged)="sidebarValue=$event"></ad-sidebar>

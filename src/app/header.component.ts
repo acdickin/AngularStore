@@ -24,7 +24,7 @@ import { Component, OnInit } from '@angular/core';
 		}
 		#shop{
 		  height: 150px;
-      left:48%;
+      left:48%;  
 
     }
     #login{

@@ -1,28 +1,31 @@
 .wrapper{
-	width:60%;
-	margin:0 auto;
+	margin:20%;
+	margin:0;
 	background-color:#556674;
 }
 .splash{
+	margin-bottom: 50px;
 	background-color:#556674;
 }
-#col3{
+/*#col3{
 	position:relative;
 	float:left;
-	width:25%;
+	width:22%;
 	height:200px;
+	margin:10px;
 	background-color:#57796C;
 }
 #col9{
   position:relative;
 	float: left;
-	width:75%;
+	width:70%;
+	margin:10px;
 	height:200px;
 	background-color:#3E6455;
-}
+}*/
 .extra{
   padding-bottom:100px;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 20%;
+	padding-right: 20%;
 	background-color:#3e505f;
 }

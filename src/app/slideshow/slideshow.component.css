@@ -2,7 +2,10 @@
 background-color:#556674;
 margin:0;
 }*/
-
+img{
+  
+  height:600px;
+}
 .carousel{
   overflow:hidden;
   width:100%;
