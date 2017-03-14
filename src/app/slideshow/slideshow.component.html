@@ -1,26 +1,50 @@
-<div class="splash">
-	<div class="carousel">
-	  <ul class="slides">
-	    <li>
-	      <h2>Interview Clothes</h2>
-	      <img [routerLink]="['/shop']" src="../../assets/img/bar1.jpg" alt="">
-	    </li>
-	    <li>
-	      <h2>Winter Clothes</h2>
-	      <img  [routerLink]="['/shop']" src="../../assets/img/bar2.jpg" alt="">
-	    </li>
-			<li>
-	      <h2> Clothes</h2>
-	      <img [routerLink]="['/shop']" src="../../assets/img/bar3.jpg" alt="">
-	    </li>
-	    <li>
-	      <h2> Clothes</h2>
-	      <img  [routerLink]="['/shop']" src="../../assets/img/bar4.jpg" alt="">
-	    </li>
-			<li>
-	      <h2> Clothes</h2>
-	      <img  [routerLink]="['/shop']" src="../../assets/img/bar5.jpg" alt="">
-	    </li>
-	  </ul>
-	</div>
+<div class="container-fluid">
+  <br>
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+      <li data-target="#carousel" data-slide-to="3"></li>
+		  <li data-target="#carousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+				<h2>Slide One</h2>
+        <img src="../../assets/img/bar1.jpg" alt="Slide One" width="460" height="345">
+      </div>
+
+      <div class="item">
+				<h2>Slide Two</h2>
+        <img src="../../assets/img/bar2.jpg" alt="Slide Two" width="460" height="345">
+      </div>
+
+      <div class="item">
+				<h2>Slide Three</h2>
+        <img src="../../assets/img/bar3.jpg" alt="Slide Three" width="460" height="345">
+      </div>
+
+      <div class="item">
+				<h2>Slide Four</h2>
+        <img src="../../assets/img/bar4.jpg" alt="Slide Four" width="460" height="345">
+      </div>
+			<div class="item">
+				<h2>Slide Five</h2>
+        <img src="../../assets/img/bar5.jpg" alt="Slide Five" width="460" height="345">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>

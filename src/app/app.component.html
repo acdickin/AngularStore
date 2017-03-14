@@ -1,6 +1,15 @@
-<ad-header></ad-header>
 
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="hidden-xs hidden-sm">
+    <large-header></large-header>
 </div>
-<ad-footer></ad-footer>  
+<div class="hidden-md hidden-lg">
+    <small-header></small-header>
+</div>
+
+<body>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</body>
+
+<ad-footer></ad-footer>

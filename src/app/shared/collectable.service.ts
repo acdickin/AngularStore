@@ -36,4 +36,15 @@ export class CollectableService{
 			this.collection.splice(this.collection.indexOf(item),1);
 	  }
 	}
+	updateCollection(item: Collectable, value){
+		let index = this.collection.indexOf(item);
+		console.log(value);
+		if(value==0){
+			this.collection.splice(this.collection.indexOf(item),1);
+		}
+		else if(this.collection[index].inCart !== value){
+		this.collection[index].inCart = value;
+		}
+		console.log("i should have updated");
+	}
 }

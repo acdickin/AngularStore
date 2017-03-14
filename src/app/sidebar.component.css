@@ -1,11 +1,11 @@
 .sidebar-icon{
 	position: fixed;
-	height:100px;
-	width:100px;
+	height:50px;
+	width:50px;
 	top:20px;
 	left:20px;
 	opacity:0.50;
-	border-radius: 10px;	
+	border-radius: 10px;
 	background-color:#445562;
 	-webkit-transition: all .2s ease-in-out;
 }
@@ -25,26 +25,26 @@
 	text-align:center;
 	height:15%;
 	width:100px;
-	list-style:none;	
+	list-style:none;
 	display: inline-block;
-	
+
 }
 .sidebar-menu li img{
-	height:40px;
-	width:40px;
-	
+	height:6rem;
+	width:6rem;
+
 }
 .icons{
 	padding: 0;
 	display: inline-block;
 	background-repeat: no-repeat no-repeat;
 	pointer-events: none;
-	height:40px;
-	width:40px;
+	height:6rem;
+	width:6rem;
 	-webkit-transition: all .5s ease-in;
 }
 .icons:hover{
-	
+
 }
 button:hover{
 	border:black bold 3px;
@@ -57,8 +57,8 @@ button:active{
 
 }
 button{
-	background-color: transparent;	
-	border: transparent;	
+	background-color: transparent;
+	border: transparent;
 }
 .sidebar{
 	background-color: grey;
@@ -67,4 +67,8 @@ button{
 .sidebar:active{
 	animation:translateX(150px);
 	-webkit-transition: all 2s ease-in-out;
+}
+#img{
+	height: 200px;
+	width: 200px;
 }

@@ -18,6 +18,7 @@ import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './checkout/login.component';
+import { SmallHeaderComponent } from './small-header.component';
 
 
 
@@ -33,7 +34,8 @@ import { LoginComponent } from './checkout/login.component';
   SplashComponent,
   FooterComponent,
   CheckoutComponent,
-  LoginComponent
+  LoginComponent,
+  SmallHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
-<div id="cart">  
+<div id="cart">
   <h1>Cart:</h1>
-  <div *ngIf="collectedItems.length==0">
+   <div *ngIf="collectedItems.length==0">
   	<h2> No items added to the Cart</h2>
   </div>
 
-  <table class="list-group" *ngIf="collectedItems.length> 0" >
+  <table class="table" *ngIf="collectedItems.length> 0" >
 		<tr>
 			<th></th>
 			<th>Quantity</th>
@@ -12,22 +12,23 @@
 			<th>Image</th>
 			<th>Cost</th>
 		</tr>
-		<tr class="list-group-item" *ngFor="let item of collectedItems;  ">
-			<td><button id="remove" (click)="onRemoveFromCollection(item)">Remove</button></td>
-			<td>{{item.inCart}}</td>
-			<td>{{item.name}}</td>
-			<td><img id="img" src="../assets/img/clothes/{{item.img}}" alt="{{item.name}}"/></td>
-			<td>{{item.cost | currency:'USD':true}}</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td>Total:</td>
-			<td>{{getTotal() | currency:'USD':true}}</td>
-			<td> <button [routerLink]="['/login']" id="Checkout" >CHECKOUT</button></td>
-		</tr>
-
+      <tbody>
+        <tr *ngFor="let item of collectedItems;  ">
+    			<td><button class="btn btn-primary" id="remove" (click)="onRemoveFromCollection(item)">Remove</button></td>
+    			<td><input type="number"  [(ngModel)]="item.inCart" (ngModelChange)="  updateCollection(item, $event)" ></td>
+    			<td>{{item.name}}</td>
+    			<td><img id="img" src="../assets/img/clothes/{{item.img}}" alt="{{item.name}}"/></td>
+    			<td>{{item.cost | currency:'USD':true}}</td>
+    		</tr>
+    		<tr class="total">
+    			<td></td>
+    			<td></td>
+    			<td>Total:</td>
+    			<td>{{getTotal() | currency:'USD':true}}</td>
+    			<td> <button [routerLink]="['/login']" class="btn btn-primary" id="Checkout" >CHECKOUT</button></td>
+    		</tr>
+      </tbody>
   </table>
- 
-  
+
+
 </div>
