@@ -17,21 +17,21 @@
 	position: fixed;
 	height:100%;
 	top:-150px;
-	left:80px;
+	left:3rem;
 	display:hidden;
 	padding-top: 180px;
 }
 .sidebar-menu li{
 	text-align:center;
 	height:15%;
-	width:100px;
+
 	list-style:none;
 	display: inline-block;
 
 }
 .sidebar-menu li img{
-	height:6rem;
-	width:6rem;
+	height:4rem;
+	width:4rem;
 
 }
 .icons{

@@ -17,7 +17,7 @@ export class CartComponent implements OnInit {
 
   updateCollection(item: Collectable, value){
     console.log(value);
-    if(value===null){}
+    if(value==null){}
     else if(value <= 100 && value>=0){
       this.collectableService.updateCollection(item, value);
     }
